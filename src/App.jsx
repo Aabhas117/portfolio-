@@ -1,7 +1,6 @@
 import DigitalUniverse from "./three/DigitalUniverse";
 import Navbar from "./components/Navbar";
 import ProfileSidebar from "./components/ProfileSidebar";
-import Summary from "./components/Summary";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
@@ -26,7 +25,6 @@ function App() {
 
         {/* Right Main Content Area Column */}
         <main id="home" className="main-content-area">
-          <Summary />
           <About />
           <Skills />
           <Projects />

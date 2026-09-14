@@ -29,6 +29,25 @@ import { SiExpress, SiMongodb, SiTailwindcss, SiVite, SiPostman } from "react-ic
 import "./Skills.css";
 
 function Skills() {
+  const getCategoryIcon = (category) => {
+    switch (category.toUpperCase()) {
+      case "LANGUAGES":
+        return <FaCode className="category-header-icon" />;
+      case "FRONTEND":
+        return <FaReact className="category-header-icon" />;
+      case "BACKEND":
+        return <FaServer className="category-header-icon" />;
+      case "DATABASES & CLOUD":
+        return <FaDatabase className="category-header-icon" />;
+      case "TOOLS & DEVOPS":
+        return <FaGitAlt className="category-header-icon" />;
+      case "CORE CS":
+        return <FaProjectDiagram className="category-header-icon" />;
+      default:
+        return <FaCode className="category-header-icon" />;
+    }
+  };
+
   const getSkillIcon = (name) => {
     switch (name) {
       case "C++":
@@ -121,14 +140,17 @@ function Skills() {
           <div className="title-underline"></div>
         </div>
 
-        {/* Dynamic Category Cards Grid */}
+        {/* 3x2 Grid for Desktop, 2col for Tablet, 1col for Mobile */}
         <div className="skills-grid">
           {skills.map((categoryObj) => (
             <div key={categoryObj.category} className="skill-category-card">
-              <h3 className="category-title">{categoryObj.category.toUpperCase()}</h3>
-              <div className="skills-list">
+              <div className="category-header-group">
+                {getCategoryIcon(categoryObj.category)}
+                <h3 className="category-title">{categoryObj.category.toUpperCase()}</h3>
+              </div>
+              <div className="skills-chips-wrapper">
                 {categoryObj.skills.map((skillName) => (
-                  <div key={skillName} className="skill-item">
+                  <div key={skillName} className="skill-chip">
                     {getSkillIcon(skillName)}
                     <span className="skill-name">{skillName}</span>
                   </div>

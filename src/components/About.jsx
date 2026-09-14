@@ -31,7 +31,6 @@ function About() {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <div className="about-header">
-          <span className="section-label">GET TO KNOW ME</span>
           <h2 className="section-title">ABOUT ME</h2>
           <div className="title-underline"></div>
         </div>

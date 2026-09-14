@@ -16,10 +16,11 @@
   margin: 0.3rem 0 1rem 0;
 }
 
+/* 3 Columns x 2 Rows Desktop Grid */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
 }
 
 .skill-category-card {
@@ -30,44 +31,72 @@
   text-align: left;
   display: flex;
   flex-direction: column;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.skill-category-card:hover {
+  border-color: rgba(168, 85, 247, 0.35);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.category-header-group {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.category-header-icon {
+  font-size: 1rem;
+  color: var(--accent-purple);
+  flex-shrink: 0;
 }
 
 .category-title {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.825rem;
   font-weight: 700;
   color: var(--accent-purple);
   letter-spacing: 0.08em;
-  margin: 0 0 1rem 0;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid var(--border-subtle);
+  margin: 0;
 }
 
-.skills-list {
+.skills-chips-wrapper {
   display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-content: start;
 }
 
-.skill-item {
-  display: flex;
+.skill-chip {
+  display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
-  padding: 0.4rem 0.6rem;
+  gap: 0.45rem;
+  padding: 0.35rem 0.65rem;
   background: rgba(30, 41, 59, 0.45);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.skill-chip:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+  background: rgba(30, 41, 59, 0.8);
 }
 
 .skill-icon {
-  font-size: 1rem;
+  font-size: 0.95rem;
   flex-shrink: 0;
 }
 
 .skill-name {
-  font-size: 0.825rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: var(--text-primary);
+  white-space: nowrap;
 }
 
 /* Icon Color Accents */
@@ -81,9 +110,18 @@
 .icon-white { color: #f8fafc; }
 .icon-red { color: #f87171; }
 
-@media (max-width: 680px) {
+/* Responsive Grid Rules */
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
   .skills-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .skills-section {
