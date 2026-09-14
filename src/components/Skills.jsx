@@ -22,6 +22,8 @@ import {
   FaLayerGroup,
   FaMobileAlt,
   FaSlidersH,
+  FaDocker,
+  FaPlug,
 } from "react-icons/fa";
 import { SiExpress, SiMongodb, SiTailwindcss, SiVite, SiPostman } from "react-icons/si";
 import "./Skills.css";
@@ -39,10 +41,13 @@ function Skills() {
         return <FaHtml5 className="skill-icon icon-orange" />;
       case "CSS3":
         return <FaCss3Alt className="skill-icon icon-blue" />;
+      case "DSA":
       case "Data Structures & Algorithms":
         return <FaProjectDiagram className="skill-icon icon-purple" />;
+      case "OOP":
       case "Object-Oriented Programming (OOP)":
         return <FaCubes className="skill-icon icon-indigo" />;
+      case "DBMS":
       case "Database Management Systems (DBMS)":
         return <FaDatabase className="skill-icon icon-blue" />;
       case "Operating Systems":
@@ -59,6 +64,8 @@ function Skills() {
         return <FaKey className="skill-icon icon-yellow" />;
       case "MVC Architecture":
         return <FaLayerGroup className="skill-icon icon-indigo" />;
+      case "WebSocket":
+        return <FaPlug className="skill-icon icon-purple" />;
       case "React.js":
         return <FaReact className="skill-icon icon-cyan" />;
       case "Tailwind CSS":
@@ -89,6 +96,8 @@ function Skills() {
         return <FaCode className="skill-icon icon-blue" />;
       case "npm":
         return <FaNpm className="skill-icon icon-red" />;
+      case "Docker":
+        return <FaDocker className="skill-icon icon-cyan" />;
       default:
         return <FaCode className="skill-icon" />;
     }

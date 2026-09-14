@@ -1,30 +1,10 @@
 const skills = [
   {
-    category: "Programming Languages",
+    category: "LANGUAGES",
     skills: ["C++", "JavaScript (ES6+)", "SQL", "HTML5", "CSS3"],
   },
   {
-    category: "Core Computer Science",
-    skills: [
-      "Data Structures & Algorithms",
-      "Object-Oriented Programming (OOP)",
-      "Database Management Systems (DBMS)",
-      "Operating Systems",
-      "Computer Networks",
-    ],
-  },
-  {
-    category: "Backend Development",
-    skills: [
-      "Node.js",
-      "Express.js",
-      "RESTful APIs",
-      "JWT Authentication",
-      "MVC Architecture",
-    ],
-  },
-  {
-    category: "Frontend Development",
+    category: "FRONTEND",
     skills: [
       "React.js",
       "Tailwind CSS",
@@ -34,12 +14,41 @@ const skills = [
     ],
   },
   {
-    category: "Database & Cloud",
+    category: "BACKEND",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "RESTful APIs",
+      "JWT Authentication",
+      "MVC Architecture",
+      "WebSocket",
+    ],
+  },
+  {
+    category: "DATABASES & CLOUD",
     skills: ["MongoDB", "Mongoose", "Cloudinary CDN", "Stripe API"],
   },
   {
-    category: "Developer Tools",
-    skills: ["Git", "GitHub", "Postman", "Linux/Unix Shell", "VS Code", "npm"],
+    category: "TOOLS & DEVOPS",
+    skills: [
+      "Git",
+      "GitHub",
+      "Postman",
+      "Linux/Unix Shell",
+      "VS Code",
+      "npm",
+      "Docker",
+    ],
+  },
+  {
+    category: "CORE CS",
+    skills: [
+      "DSA",
+      "OOP",
+      "DBMS",
+      "Operating Systems",
+      "Computer Networks",
+    ],
   },
 ];
 
