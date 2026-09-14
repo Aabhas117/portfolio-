@@ -3,8 +3,7 @@ const projects = [
     id: 1,
     name: "Vidyora",
     category: "Full-Stack Video Streaming & Social Platform",
-    description:
-      "Architected a full-featured video sharing platform supporting user authentication, dynamic search, subscriptions, watch history, and nested comment-reply threads.",
+    description: "Full-Stack Video Streaming & Social Platform",
     technologies: [
       "React",
       "Node.js",
@@ -23,10 +22,9 @@ const projects = [
   },
   {
     id: 2,
-    name: "My-Grocery",
+    name: "MERN Grocery & E-Commerce Platform",
     category: "Full-Stack E-Commerce Platform",
-    description:
-      "Developed an end-to-end e-commerce platform featuring role-based access control, automated cart synchronization, and complete order lifecycle management.",
+    description: "Full-Stack E-Commerce Platform",
     technologies: [
       "MongoDB",
       "Express.js",

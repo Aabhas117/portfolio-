@@ -19,11 +19,6 @@ function About() {
       title: "BACKEND ENGINEERING",
       description: "Architecting RESTful APIs, database schemas, authentication flows, and server-side logic.",
     },
-    {
-      number: "04",
-      title: "CONTINUOUS LEARNING",
-      description: "Constantly enhancing software architecture knowledge, engineering concepts, and developer tooling.",
-    },
   ];
 
   return (
@@ -46,7 +41,6 @@ function About() {
           <div className="about-left">
             <h3 className="about-subtitle">BACKGROUND & OBJECTIVES</h3>
             <p className="about-text">{profile.summary}</p>
-            <p className="about-text">{profile.goal}</p>
 
             {/* Academic Information Box */}
             <div className="academic-box" aria-label="Academic Information">

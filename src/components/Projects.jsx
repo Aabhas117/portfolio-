@@ -1,72 +1,36 @@
 import { motion } from "framer-motion";
 import projects from "../data/projects";
 import { FaGithub } from "react-icons/fa";
-import { FiExternalLink } from "react-icons/fi";
+import { FiExternalLink, FiArrowUpRight, FiPlayCircle, FiShoppingBag } from "react-icons/fi";
 import "./Projects.css";
 
-// Helper component for visual preview of Vidyora
-function VidyoraVisual() {
+// Clean Brand Visual for Vidyora
+function VidyoraBrand() {
   return (
-    <div className="project-visual-preview vidyora-theme">
-      <div className="browser-header">
-        <div className="browser-dots">
-          <span className="dot dot-red"></span>
-          <span className="dot dot-yellow"></span>
-          <span className="dot dot-green"></span>
+    <div className="project-brand-visual vidyora-brand-theme">
+      <div className="brand-glow-effect"></div>
+      <div className="brand-content">
+        <div className="brand-icon-box">
+          <FiPlayCircle className="brand-main-icon" />
         </div>
-        <div className="browser-address">vidyora-amber.vercel.app</div>
-      </div>
-      <div className="preview-canvas">
-        <div className="video-player-mockup">
-          <div className="play-button-ring">
-            <div className="play-triangle"></div>
-          </div>
-          <div className="video-progress-bar">
-            <div className="progress-filled"></div>
-          </div>
-        </div>
-        <div className="video-feed-mockup">
-          <div className="feed-card feed-card-1"></div>
-          <div className="feed-card feed-card-2"></div>
-          <div className="feed-card feed-card-3"></div>
-        </div>
+        <h3 className="brand-name-title">VIDYORA</h3>
+        <span className="brand-subtitle-badge">FULL-STACK VIDEO PLATFORM</span>
       </div>
     </div>
   );
 }
 
-// Helper component for visual preview of My-Grocery
-function GroceryVisual() {
+// Clean Brand Visual for My-Grocery
+function GroceryBrand() {
   return (
-    <div className="project-visual-preview grocery-theme">
-      <div className="browser-header">
-        <div className="browser-dots">
-          <span className="dot dot-red"></span>
-          <span className="dot dot-yellow"></span>
-          <span className="dot dot-green"></span>
+    <div className="project-brand-visual grocery-brand-theme">
+      <div className="brand-glow-effect"></div>
+      <div className="brand-content">
+        <div className="brand-icon-box">
+          <FiShoppingBag className="brand-main-icon" />
         </div>
-        <div className="browser-address">my-grocery-one.vercel.app</div>
-      </div>
-      <div className="preview-canvas">
-        <div className="store-header-mockup">
-          <div className="store-logo-pill"></div>
-          <div className="store-search-pill"></div>
-          <div className="store-cart-badge"></div>
-        </div>
-        <div className="products-grid-mockup">
-          <div className="product-card-mock">
-            <div className="product-img"></div>
-            <div className="product-line"></div>
-          </div>
-          <div className="product-card-mock">
-            <div className="product-img"></div>
-            <div className="product-line"></div>
-          </div>
-          <div className="product-card-mock">
-            <div className="product-img"></div>
-            <div className="product-line"></div>
-          </div>
-        </div>
+        <h3 className="brand-name-title">My-Grocery</h3>
+        <span className="brand-subtitle-badge">FULL-STACK E-COMMERCE PLATFORM</span>
       </div>
     </div>
   );
@@ -85,62 +49,83 @@ function Projects() {
         {/* Centered Section Header */}
         <div className="projects-header-centered">
           <span className="projects-label">PROJECTS</span>
-          <h2 className="projects-title">Featured Projects</h2>
+          <h2 className="projects-title">Selected Work</h2>
           <p className="projects-subtitle">
-            A selection of projects built with modern web technologies.
+            Handpicked projects built for real-world problems, real users, real impact.
           </p>
         </div>
 
-        {/* 2-Column Desktop Grid */}
+        {/* 2-Column Grid */}
         <div className="projects-grid-2col">
-          {projects.map((project) => (
-            <motion.div
-              key={project.id}
-              className="project-card-minimal"
-              whileHover={{ y: -4 }}
-              transition={{ duration: 0.25, ease: "easeOut" }}
-            >
-              {/* Project Visual Area */}
-              <div className="project-card-visual-wrapper">
-                {project.name === "Vidyora" ? (
-                  <VidyoraVisual />
-                ) : (
-                  <GroceryVisual />
-                )}
-              </div>
-
-              {/* Card Footer / Info Area */}
-              <div className="project-card-info">
-                <h3 className="project-card-name">{project.name}</h3>
-
-                <div className="project-card-links">
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link-btn"
-                    >
-                      <FaGithub className="link-icon" />
-                      <span>GitHub</span>
-                    </a>
-                  )}
-
-                  {project.live && (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link-btn project-link-live"
-                    >
-                      <FiExternalLink className="link-icon" />
-                      <span>Live Demo</span>
-                    </a>
-                  )}
+          {projects.map((project) => {
+            const isVidyora = project.name.toLowerCase().includes("vidyora");
+            
+            return (
+              <motion.div
+                key={project.id}
+                className="project-card-premium"
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.25, ease: "easeOut" }}
+              >
+                {/* Project Branding Visual Area */}
+                <div className="project-brand-wrapper">
+                  {isVidyora ? <VidyoraBrand /> : <GroceryBrand />}
                 </div>
-              </div>
-            </motion.div>
-          ))}
+
+                {/* Card Body & Information */}
+                <div className="project-card-body">
+                  <h3 className="project-name-heading">{project.name}</h3>
+                  <p className="project-description-text">{project.description}</p>
+
+                  {/* Card Footer: Links & Circular Arrow */}
+                  <div className="project-card-footer">
+                    <div className="project-links-row">
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="project-text-link"
+                        >
+                          <FaGithub className="link-inline-icon" />
+                          <span>GitHub</span>
+                        </a>
+                      )}
+
+                      {project.github && project.live && (
+                        <span className="link-separator">|</span>
+                      )}
+
+                      {project.live && (
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="project-text-link"
+                        >
+                          <FiExternalLink className="link-inline-icon" />
+                          <span>Live Demo</span>
+                        </a>
+                      )}
+                    </div>
+
+                    {/* Circular Arrow Action Button */}
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-circle-arrow-btn"
+                        aria-label={`Open ${project.name} Live Demo`}
+                      >
+                        <FiArrowUpRight className="arrow-icon" />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </motion.div>
     </section>

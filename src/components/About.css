@@ -32,10 +32,11 @@
 }
 
 .about-text {
-  font-size: 0.95rem;
-  line-height: 1.65;
+  font-size: 0.975rem;
+  line-height: 1.7;
   color: var(--text-secondary);
-  margin-bottom: 1rem;
+  max-width: 680px;
+  margin-bottom: 1.25rem;
 }
 
 .academic-box {
@@ -85,7 +86,7 @@
   font-weight: 700;
 }
 
-/* Right Column: 4 Pillar Cards */
+/* Right Column: Pillar Cards */
 .cards-grid {
   display: grid;
   grid-template-columns: 1fr;
