@@ -28,7 +28,6 @@ function Achievements() {
       >
         {/* Section Header */}
         <div className="achievements-header">
-          <span className="section-label">MILESTONES & HIGHLIGHTS</span>
           <h2 className="section-title">ACHIEVEMENTS</h2>
           <div className="title-underline"></div>
         </div>

@@ -48,18 +48,14 @@ function Projects() {
       >
         {/* Centered Section Header */}
         <div className="projects-header-centered">
-          <span className="projects-label">PROJECTS</span>
-          <h2 className="projects-title">Selected Work</h2>
-          <p className="projects-subtitle">
-            Handpicked projects built for real-world problems, real users, real impact.
-          </p>
+          <h2 className="projects-title">Projects</h2>
         </div>
 
         {/* 2-Column Grid */}
         <div className="projects-grid-2col">
           {projects.map((project) => {
             const isVidyora = project.name.toLowerCase().includes("vidyora");
-            
+
             return (
               <motion.div
                 key={project.id}

@@ -1,11 +1,10 @@
 import profile from "../data/profile";
-import { FaEnvelope, FaPhoneAlt, FaGithub, FaLinkedin, FaCode, FaGraduationCap, FaAward } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin, FaCode, FaGraduationCap, FaAward } from "react-icons/fa";
 import "./ProfileSidebar.css";
 
 function ProfileSidebar() {
   const socialLinks = [
     { name: "Email", url: profile.email ? `mailto:${profile.email}` : "", icon: <FaEnvelope /> },
-    { name: "Phone", url: profile.phone ? `tel:${profile.phone.replace(/\s+/g, "")}` : "", icon: <FaPhoneAlt /> },
     { name: "GitHub", url: profile.github, icon: <FaGithub /> },
     { name: "LinkedIn", url: profile.linkedin, icon: <FaLinkedin /> },
     { name: "LeetCode", url: profile.leetcode, icon: <FaCode /> },

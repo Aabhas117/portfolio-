@@ -85,7 +85,7 @@
 
 .skill-chip:hover {
   border-color: var(--accent-purple);
-  background: #FFFFFF;
+  background: var(--bg-surface-solid);
 }
 
 .skill-icon {

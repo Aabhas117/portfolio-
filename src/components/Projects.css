@@ -32,7 +32,7 @@
   font-weight: 800;
   color: var(--text-primary);
   letter-spacing: -0.02em;
-  margin: 0 0 0.6rem 0;
+  margin: 0;
 }
 
 .projects-subtitle {
@@ -54,18 +54,18 @@
 
 /* Premium Card Container */
 .project-card-premium {
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
 
 .project-card-premium:hover {
-  border-color: rgba(139, 92, 246, 0.4);
+  border-color: var(--accent-purple);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
@@ -175,12 +175,12 @@
   flex-direction: column;
   gap: 0.4rem;
   flex: 1;
-  background: #FFFFFF;
+  background: var(--bg-card);
 }
 
 .project-name-heading {
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 750;
   color: var(--text-primary);
   margin: 0;
   letter-spacing: -0.01em;
@@ -188,7 +188,8 @@
 
 .project-description-text {
   font-size: 0.88rem;
-  line-height: 1.5;
+  font-weight: 500;
+  line-height: 1.55;
   color: var(--text-secondary);
   margin: 0 0 1rem 0;
 }
@@ -214,7 +215,7 @@
   align-items: center;
   gap: 0.4rem;
   font-size: 0.83rem;
-  font-weight: 600;
+  font-weight: 650;
   color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.2s ease;

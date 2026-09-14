@@ -96,22 +96,6 @@ function Contact() {
                 </div>
               </div>
 
-              {/* Phone */}
-              <div className="detail-item">
-                <div className="detail-icon-wrapper">
-                  <FaPhoneAlt className="detail-icon icon-cyan" />
-                </div>
-                <div className="detail-info">
-                  <span className="detail-label">PHONE</span>
-                  {profile.phone ? (
-                    <a href={`tel:${profile.phone.replace(/\s+/g, "")}`} className="detail-value">
-                      {profile.phone}
-                    </a>
-                  ) : (
-                    <span className="detail-value disabled-text">Not provided</span>
-                  )}
-                </div>
-              </div>
 
               {/* LinkedIn */}
               <div className="detail-item">
@@ -156,7 +140,7 @@ function Contact() {
                   <span className="detail-label">LEETCODE</span>
                   {profile.leetcode ? (
                     <a href={profile.leetcode} target="_blank" rel="noopener noreferrer" className="detail-value">
-                      View Algorithmic Profile
+                      View Profile
                     </a>
                   ) : (
                     <span className="detail-value disabled-text">Profile URL coming soon</span>

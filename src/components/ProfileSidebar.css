@@ -104,7 +104,7 @@
 .profile-social-btn:hover {
   border-color: var(--accent-teal);
   color: var(--accent-teal);
-  background: #FFFFFF;
+  background: var(--bg-surface-solid);
 }
 
 .sidebar-social-disabled,
