@@ -1,5 +1,6 @@
 import { useRef, useEffect } from "react";
 import { useFrame } from "@react-three/fiber";
+import { useTheme } from "../context/ThemeContext";
 import UniverseGrid from "./UniverseGrid";
 import UniverseParticles from "./UniverseParticles";
 import DeveloperCore from "./DeveloperCore";
@@ -8,6 +9,7 @@ import ProjectLab from "./ProjectLab";
 
 function UniverseScene() {
   const scrollYRef = useRef(0);
+  const { threeConfig } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,9 +30,9 @@ function UniverseScene() {
 
   return (
     <>
-      <ambientLight intensity={0.7} />
-      <directionalLight position={[10, 10, 10]} intensity={0.8} color="#3B82F6" />
-      <pointLight position={[4.5, 1, 5]} intensity={0.8} color="#1D4ED8" />
+      <ambientLight intensity={threeConfig.lightAmbient || 0.7} />
+      <directionalLight position={[10, 10, 10]} intensity={0.8} color={threeConfig.lightDirectionalColor} />
+      <pointLight position={[4.5, 1, 5]} intensity={0.8} color={threeConfig.lightPointColor} />
       <UniverseGrid />
       <UniverseParticles count={600} />
       <DeveloperCore position={[4.5, 0.5, 0]} />

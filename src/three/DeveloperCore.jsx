@@ -1,12 +1,14 @@
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Text } from "@react-three/drei";
+import { useTheme } from "../context/ThemeContext";
 
 function DeveloperCore({ position = [4.5, 0.5, 0], scale = 1 }) {
   const groupRef = useRef();
   const innerRef = useRef();
   const ring1Ref = useRef();
   const ring2Ref = useRef();
+  const { threeConfig } = useTheme();
 
   useFrame((state, delta) => {
     if (groupRef.current) {
@@ -32,7 +34,7 @@ function DeveloperCore({ position = [4.5, 0.5, 0], scale = 1 }) {
       <mesh>
         <icosahedronGeometry args={[1.6, 1]} />
         <meshStandardMaterial
-          color="#3B82F6"
+          color={threeConfig.meshWireframeColor}
           wireframe
           transparent
           opacity={0.25}
@@ -43,10 +45,10 @@ function DeveloperCore({ position = [4.5, 0.5, 0], scale = 1 }) {
       <mesh ref={innerRef}>
         <octahedronGeometry args={[0.9, 0]} />
         <meshStandardMaterial
-          color="#1D4ED8"
+          color={threeConfig.meshSolidColor}
           roughness={0.3}
           metalness={0.7}
-          emissive="#1D4ED8"
+          emissive={threeConfig.meshSolidColor}
           emissiveIntensity={0.3}
         />
       </mesh>
@@ -54,37 +56,37 @@ function DeveloperCore({ position = [4.5, 0.5, 0], scale = 1 }) {
       {/* Primary Orbital Ring */}
       <mesh ref={ring1Ref} rotation={[Math.PI / 3, Math.PI / 6, 0]}>
         <torusGeometry args={[2.5, 0.015, 16, 64]} />
-        <meshBasicMaterial color="#3B82F6" transparent opacity={0.3} />
+        <meshBasicMaterial color={threeConfig.meshWireframeColor} transparent opacity={0.3} />
       </mesh>
 
       {/* Secondary Orbital Ring */}
       <mesh ref={ring2Ref} rotation={[-Math.PI / 4, -Math.PI / 4, Math.PI / 3]}>
         <torusGeometry args={[3.1, 0.012, 16, 64]} />
-        <meshBasicMaterial color="#8B5CF6" transparent opacity={0.3} />
+        <meshBasicMaterial color={threeConfig.meshAccentColor} transparent opacity={0.3} />
       </mesh>
 
       {/* Orbital System Nodes */}
       <mesh position={[2.2, 1.2, 0]}>
         <sphereGeometry args={[0.09, 16, 16]} />
-        <meshBasicMaterial color="#3B82F6" />
+        <meshBasicMaterial color={threeConfig.meshWireframeColor} />
       </mesh>
 
       <mesh position={[-2.4, -1.0, 0.8]}>
         <sphereGeometry args={[0.08, 16, 16]} />
-        <meshBasicMaterial color="#8B5CF6" />
+        <meshBasicMaterial color={threeConfig.meshAccentColor} />
       </mesh>
 
       <mesh position={[0.5, -2.8, -0.5]}>
         <sphereGeometry args={[0.07, 16, 16]} />
-        <meshBasicMaterial color="#60A5FA" />
+        <meshBasicMaterial color={threeConfig.meshNodeColor} />
       </mesh>
 
       {/* Minimal Developer Identity Text */}
       <Text
         position={[0, 2.4, 0]}
         fontSize={0.38}
-        color="#93C5FD"
-        fillOpacity={0.45}
+        color={threeConfig.text3DColor}
+        fillOpacity={threeConfig.text3DFillOpacity || 0.45}
         anchorX="center"
         anchorY="middle"
         letterSpacing={0.12}
@@ -95,8 +97,8 @@ function DeveloperCore({ position = [4.5, 0.5, 0], scale = 1 }) {
       <Text
         position={[0, -2.4, 0]}
         fontSize={0.18}
-        color="#60A5FA"
-        fillOpacity={0.4}
+        color={threeConfig.text3DColor}
+        fillOpacity={threeConfig.text3DFillOpacity || 0.4}
         anchorX="center"
         anchorY="middle"
         letterSpacing={0.15}

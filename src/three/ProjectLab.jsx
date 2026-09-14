@@ -2,9 +2,11 @@ import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import projects from "../data/projects";
 import { Text } from "@react-three/drei";
+import { useTheme } from "../context/ThemeContext";
 
 function ProjectLab({ position = [0, -3.8, -1], scale = 0.9 }) {
   const groupRef = useRef();
+  const { threeConfig } = useTheme();
 
   useFrame((state, delta) => {
     if (groupRef.current) {
@@ -23,14 +25,14 @@ function ProjectLab({ position = [0, -3.8, -1], scale = 0.9 }) {
       {/* Project Lab Central Hub Marker */}
       <mesh position={[0, 0.8, 0]}>
         <boxGeometry args={[0.5, 0.5, 0.5]} />
-        <meshStandardMaterial color="#1D4ED8" wireframe transparent opacity={0.25} />
+        <meshStandardMaterial color={threeConfig.meshSolidColor} wireframe transparent opacity={0.25} />
       </mesh>
 
       <Text
         position={[0, 1.4, 0]}
         fontSize={0.24}
-        color="#93C5FD"
-        fillOpacity={0.45}
+        color={threeConfig.text3DColor}
+        fillOpacity={threeConfig.text3DFillOpacity || 0.45}
         anchorX="center"
         anchorY="middle"
         letterSpacing={0.12}
@@ -49,7 +51,7 @@ function ProjectLab({ position = [0, -3.8, -1], scale = 0.9 }) {
             <mesh>
               <dodecahedronGeometry args={[0.8, 0]} />
               <meshStandardMaterial
-                color="#3B82F6"
+                color={threeConfig.meshWireframeColor}
                 wireframe
                 transparent
                 opacity={0.25}
@@ -60,7 +62,7 @@ function ProjectLab({ position = [0, -3.8, -1], scale = 0.9 }) {
             <mesh>
               <octahedronGeometry args={[0.4, 0]} />
               <meshStandardMaterial
-                color="#1D4ED8"
+                color={threeConfig.meshSolidColor}
                 roughness={0.3}
                 metalness={0.7}
                 transparent
@@ -71,15 +73,15 @@ function ProjectLab({ position = [0, -3.8, -1], scale = 0.9 }) {
             {/* Orbital Ring */}
             <mesh rotation={[Math.PI / 4, Math.PI / 4, 0]}>
               <torusGeometry args={[1.3, 0.01, 16, 32]} />
-              <meshBasicMaterial color="#8B5CF6" transparent opacity={0.3} />
+              <meshBasicMaterial color={threeConfig.meshAccentColor} transparent opacity={0.3} />
             </mesh>
 
             {/* Title Label */}
             <Text
               position={[0, 1.2, 0]}
               fontSize={0.22}
-              color="#93C5FD"
-              fillOpacity={0.4}
+              color={threeConfig.text3DColor}
+              fillOpacity={threeConfig.text3DFillOpacity || 0.4}
               anchorX="center"
               anchorY="middle"
               letterSpacing={0.1}
@@ -97,7 +99,7 @@ function ProjectLab({ position = [0, -3.8, -1], scale = 0.9 }) {
               return (
                 <mesh key={tech} position={[tx, ty, 0]}>
                   <sphereGeometry args={[0.07, 12, 12]} />
-                  <meshBasicMaterial color="#60A5FA" transparent opacity={0.4} />
+                  <meshBasicMaterial color={threeConfig.meshNodeColor} transparent opacity={0.4} />
                 </mesh>
               );
             })}

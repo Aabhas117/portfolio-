@@ -2,9 +2,11 @@ import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import skills from "../data/skills";
 import { Text } from "@react-three/drei";
+import { useTheme } from "../context/ThemeContext";
 
 function SkillNetwork({ position = [-5, 1.5, -2], scale = 0.85 }) {
   const groupRef = useRef();
+  const { threeConfig } = useTheme();
 
   useFrame((state, delta) => {
     if (groupRef.current) {
@@ -28,7 +30,7 @@ function SkillNetwork({ position = [-5, 1.5, -2], scale = 0.85 }) {
       <mesh position={[0, 0, 0]}>
         <octahedronGeometry args={[0.7, 0]} />
         <meshStandardMaterial
-          color="#1D4ED8"
+          color={threeConfig.meshSolidColor}
           wireframe
           transparent
           opacity={0.3}
@@ -38,8 +40,8 @@ function SkillNetwork({ position = [-5, 1.5, -2], scale = 0.85 }) {
       <Text
         position={[0, 1.0, 0]}
         fontSize={0.22}
-        color="#93C5FD"
-        fillOpacity={0.45}
+        color={threeConfig.text3DColor}
+        fillOpacity={threeConfig.text3DFillOpacity || 0.45}
         anchorX="center"
         anchorY="middle"
         letterSpacing={0.1}
@@ -57,7 +59,7 @@ function SkillNetwork({ position = [-5, 1.5, -2], scale = 0.85 }) {
             <mesh>
               <sphereGeometry args={[0.35, 16, 16]} />
               <meshStandardMaterial
-                color="#3B82F6"
+                color={threeConfig.meshWireframeColor}
                 roughness={0.3}
                 metalness={0.6}
                 transparent
@@ -69,8 +71,8 @@ function SkillNetwork({ position = [-5, 1.5, -2], scale = 0.85 }) {
             <Text
               position={[0, 0.55, 0]}
               fontSize={0.18}
-              color="#93C5FD"
-              fillOpacity={0.4}
+              color={threeConfig.text3DColor}
+              fillOpacity={threeConfig.text3DFillOpacity || 0.4}
               anchorX="center"
               anchorY="middle"
               letterSpacing={0.08}
@@ -89,7 +91,7 @@ function SkillNetwork({ position = [-5, 1.5, -2], scale = 0.85 }) {
                 <group key={skillName} position={[nodeX, nodeY, 0]}>
                   <mesh>
                     <sphereGeometry args={[0.1, 12, 12]} />
-                    <meshBasicMaterial color="#60A5FA" transparent opacity={0.4} />
+                    <meshBasicMaterial color={threeConfig.meshNodeColor} transparent opacity={0.4} />
                   </mesh>
                 </group>
               );

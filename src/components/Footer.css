@@ -61,7 +61,7 @@
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: #FFFFFF;
+  background: var(--bg-surface-solid);
   border: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;

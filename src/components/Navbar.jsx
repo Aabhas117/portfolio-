@@ -1,6 +1,7 @@
 import { useState } from "react";
 import profile from "../data/profile";
 import { FaGithub, FaLinkedin, FaCode } from "react-icons/fa";
+import ThemeSwitcher from "./ThemeSwitcher";
 import "./Navbar.css";
 
 function Navbar() {
@@ -50,31 +51,34 @@ function Navbar() {
           </ul>
         </nav>
 
-        {/* Right: Quick Social Icons */}
-        <div className="navbar-right-social">
-          {socialLinks.map((item) =>
-            item.url ? (
-              <a
-                key={item.name}
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="nav-social-btn"
-                aria-label={item.name}
-              >
-                {item.icon}
-              </a>
-            ) : (
-              <span
-                key={item.name}
-                className="nav-social-btn nav-social-disabled"
-                title={`${item.name} profile link currently unavailable`}
-                aria-disabled="true"
-              >
-                {item.icon}
-              </span>
-            )
-          )}
+        {/* Right: Social Icons & Theme Switcher */}
+        <div className="navbar-right-container">
+          <div className="navbar-right-social">
+            {socialLinks.map((item) =>
+              item.url ? (
+                <a
+                  key={item.name}
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="nav-social-btn"
+                  aria-label={item.name}
+                >
+                  {item.icon}
+                </a>
+              ) : (
+                <span
+                  key={item.name}
+                  className="nav-social-btn nav-social-disabled"
+                  title={`${item.name} profile link currently unavailable`}
+                  aria-disabled="true"
+                >
+                  {item.icon}
+                </span>
+              )
+            )}
+          </div>
+          <ThemeSwitcher />
         </div>
 
         {/* Mobile Hamburger Button */}

@@ -1,8 +1,10 @@
 import { useMemo, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
+import { useTheme } from "../context/ThemeContext";
 
 function UniverseParticles({ count = 600 }) {
   const pointsRef = useRef();
+  const { threeConfig } = useTheme();
 
   const positions = useMemo(() => {
     const pos = new Float32Array(count * 3);
@@ -30,9 +32,9 @@ function UniverseParticles({ count = 600 }) {
       </bufferGeometry>
       <pointsMaterial
         size={0.08}
-        color="#3B82F6"
+        color={threeConfig.particleColor}
         transparent
-        opacity={0.25}
+        opacity={threeConfig.particleOpacity || 0.25}
         sizeAttenuation
       />
     </points>
