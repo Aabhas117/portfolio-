@@ -28,9 +28,9 @@ function UniverseScene() {
 
   return (
     <>
-      <ambientLight intensity={0.6} />
-      <directionalLight position={[10, 10, 10]} intensity={0.5} />
-      <pointLight position={[4.5, 1, 5]} intensity={0.8} color="#6366f1" />
+      <ambientLight intensity={0.9} />
+      <directionalLight position={[10, 10, 10]} intensity={0.6} />
+      <pointLight position={[4.5, 1, 5]} intensity={0.3} color="#20C9A6" />
       <UniverseGrid />
       <UniverseParticles count={600} />
       <DeveloperCore position={[4.5, 0.5, 0]} />

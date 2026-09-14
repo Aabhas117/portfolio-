@@ -3,7 +3,7 @@
   top: 0;
   z-index: 1000;
   width: 100%;
-  background: rgba(8, 12, 20, 0.88);
+  background: rgba(248, 246, 240, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-subtle);
@@ -28,7 +28,7 @@
 }
 
 .logo-accent {
-  color: var(--accent-indigo);
+  color: var(--accent-teal);
 }
 
 .navbar-links {
@@ -51,7 +51,7 @@
 
 .nav-link:hover,
 .nav-link:focus-visible {
-  color: var(--accent-indigo);
+  color: var(--accent-teal);
 }
 
 /* Right Social Links */
@@ -65,20 +65,21 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: rgba(30, 41, 59, 0.5);
+  background: var(--bg-secondary);
   border: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   font-size: 1rem;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .nav-social-btn:hover {
-  color: var(--accent-cyan);
-  border-color: var(--accent-cyan);
+  color: var(--accent-teal);
+  border-color: var(--accent-teal);
+  background: #ffffff;
 }
 
 .nav-social-disabled,
@@ -86,7 +87,7 @@
   color: var(--text-muted);
   opacity: 0.5;
   cursor: not-allowed;
-  border-color: rgba(255, 255, 255, 0.04);
+  border-color: var(--border-subtle);
 }
 
 .navbar-hamburger {
@@ -110,7 +111,7 @@
 
 /* Mobile Nav Drawer */
 .navbar-mobile-nav {
-  background: rgba(13, 18, 31, 0.95);
+  background: rgba(248, 246, 240, 0.98);
   border-bottom: 1px solid var(--border-subtle);
   padding: 1.25rem 1.5rem;
 }
@@ -135,7 +136,7 @@
 }
 
 .mobile-nav-link:hover {
-  color: var(--accent-indigo);
+  color: var(--accent-teal);
 }
 
 @media (max-width: 860px) {

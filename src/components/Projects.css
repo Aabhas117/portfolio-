@@ -3,7 +3,7 @@
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   padding: 2.5rem 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .projects-container {
@@ -54,18 +54,19 @@
 
 /* Premium Card Container */
 .project-card-premium {
-  background: rgba(13, 17, 28, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .project-card-premium:hover {
-  border-color: rgba(168, 85, 247, 0.4);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(168, 85, 247, 0.08);
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
 /* Brand Visual Area */
@@ -88,11 +89,11 @@
 }
 
 .vidyora-brand-theme {
-  background: linear-gradient(135deg, rgba(88, 28, 135, 0.35) 0%, rgba(30, 27, 75, 0.95) 60%, rgba(10, 15, 26, 0.98) 100%);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.25) 0%, rgba(124, 58, 237, 0.85) 60%, rgba(30, 27, 75, 0.95) 100%);
 }
 
 .grocery-brand-theme {
-  background: linear-gradient(135deg, rgba(6, 78, 59, 0.35) 0%, rgba(6, 44, 38, 0.95) 60%, rgba(10, 15, 26, 0.98) 100%);
+  background: linear-gradient(135deg, rgba(32, 201, 166, 0.25) 0%, rgba(13, 148, 136, 0.85) 60%, rgba(6, 44, 38, 0.95) 100%);
 }
 
 .brand-glow-effect {
@@ -106,11 +107,11 @@
 }
 
 .vidyora-brand-theme .brand-glow-effect {
-  background: #a855f7;
+  background: #8B5CF6;
 }
 
 .grocery-brand-theme .brand-glow-effect {
-  background: #10b981;
+  background: #20C9A6;
 }
 
 .brand-content {
@@ -127,8 +128,8 @@
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -138,12 +139,12 @@
 
 .vidyora-brand-theme .brand-main-icon {
   font-size: 1.5rem;
-  color: #c084fc;
+  color: #e9d5ff;
 }
 
 .grocery-brand-theme .brand-main-icon {
   font-size: 1.5rem;
-  color: #34d399;
+  color: #99f6e4;
 }
 
 .brand-name-title {
@@ -160,9 +161,9 @@
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.12em;
-  color: rgba(255, 255, 255, 0.65);
-  background: rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   padding: 3px 10px;
   border-radius: 20px;
 }
@@ -174,7 +175,7 @@
   flex-direction: column;
   gap: 0.4rem;
   flex: 1;
-  background: rgba(12, 16, 26, 0.6);
+  background: #FFFFFF;
 }
 
 .project-name-heading {
@@ -198,7 +199,7 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid var(--border-subtle);
   margin-top: auto;
 }
 
@@ -220,7 +221,7 @@
 }
 
 .project-text-link:hover {
-  color: #ffffff;
+  color: var(--accent-purple);
 }
 
 .link-inline-icon {
@@ -228,7 +229,7 @@
 }
 
 .link-separator {
-  color: rgba(255, 255, 255, 0.2);
+  color: var(--border-subtle);
   font-size: 0.85rem;
   font-weight: 300;
 }
@@ -238,8 +239,8 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -249,8 +250,8 @@
 }
 
 .project-circle-arrow-btn:hover {
-  background: rgba(168, 85, 247, 0.2);
-  border-color: rgba(168, 85, 247, 0.5);
+  background: var(--accent-purple);
+  border-color: var(--accent-purple);
   color: #ffffff;
   transform: translate(2px, -2px);
 }

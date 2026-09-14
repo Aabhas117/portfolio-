@@ -3,7 +3,7 @@
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   padding: 2.25rem 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .achievements-container {
@@ -24,6 +24,7 @@
   text-align: left;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
 }
 
 .achievement-card-header {
@@ -34,7 +35,7 @@
 }
 
 .achievement-icon-wrapper {
-  background: rgba(30, 41, 59, 0.7);
+  background: var(--bg-secondary);
   border: 1px solid var(--border-subtle);
   padding: 0.65rem;
   border-radius: var(--radius-sm);

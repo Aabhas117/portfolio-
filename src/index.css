@@ -2,24 +2,29 @@
    DESIGN TOKENS & SYSTEM FOUNDATION
    ========================================== */
 :root {
-  /* Colors */
-  --bg-primary: #060911;
-  --bg-secondary: #0c111e;
-  --bg-surface: rgba(15, 23, 42, 0.85);
-  --bg-surface-solid: #0f172a;
-  --bg-card: rgba(17, 24, 39, 0.7);
+  /* Colors - Light Warm Palette */
+  --bg-primary: #F8F6F0;
+  --bg-secondary: #F0EEE7;
+  --bg-surface: rgba(255, 255, 255, 0.92);
+  --bg-surface-solid: #FFFFFF;
+  --bg-card: #FFFFFF;
   
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-accent: rgba(99, 102, 241, 0.35);
+  --border-subtle: #D9D6CE;
+  --border-accent: rgba(32, 201, 166, 0.4);
   
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  --text-primary: #111111;
+  --text-secondary: #555555;
+  --text-muted: #777777;
   
-  --accent-indigo: #6366f1;
-  --accent-purple: #a855f7;
-  --accent-cyan: #38bdf8;
-  --accent-emerald: #10b981;
+  --accent-mint: #63E6C2;
+  --accent-teal: #20C9A6;
+  --accent-purple: #8B5CF6;
+  --accent-pink: #F472B6;
+  --accent-blue: #60A5FA;
+  
+  --accent-indigo: #20C9A6;
+  --accent-cyan: #20C9A6;
+  --accent-emerald: #20C9A6;
   
   /* Typography */
   --font-serif: "Georgia", "Playfair Display", "Times New Roman", serif;
@@ -39,7 +44,7 @@
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
@@ -94,7 +99,7 @@ header, footer {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   font-weight: 700;
-  color: var(--accent-cyan);
+  color: var(--accent-purple);
   letter-spacing: 0.15em;
   display: block;
   margin-bottom: 0.4rem;
@@ -112,7 +117,7 @@ header, footer {
 .title-underline {
   width: 50px;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent-indigo) 0%, var(--accent-purple) 100%);
+  background: linear-gradient(90deg, var(--accent-teal) 0%, var(--accent-purple) 100%);
   margin-bottom: 2rem;
   border-radius: 2px;
 }
@@ -122,7 +127,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid var(--accent-cyan);
+  outline: 2px solid var(--accent-teal);
   outline-offset: 2px;
 }
 

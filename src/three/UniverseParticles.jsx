@@ -30,9 +30,9 @@ function UniverseParticles({ count = 600 }) {
       </bufferGeometry>
       <pointsMaterial
         size={0.08}
-        color="#6366f1"
+        color="#8B5CF6"
         transparent
-        opacity={0.55}
+        opacity={0.15}
         sizeAttenuation
       />
     </points>

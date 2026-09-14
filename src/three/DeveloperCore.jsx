@@ -32,10 +32,10 @@ function DeveloperCore({ position = [4.5, 0.5, 0], scale = 1 }) {
       <mesh>
         <icosahedronGeometry args={[1.6, 1]} />
         <meshStandardMaterial
-          color="#6366f1"
+          color="#8B5CF6"
           wireframe
           transparent
-          opacity={0.6}
+          opacity={0.12}
         />
       </mesh>
 
@@ -43,47 +43,48 @@ function DeveloperCore({ position = [4.5, 0.5, 0], scale = 1 }) {
       <mesh ref={innerRef}>
         <octahedronGeometry args={[0.9, 0]} />
         <meshStandardMaterial
-          color="#38bdf8"
-          roughness={0.2}
-          metalness={0.8}
-          emissive="#38bdf8"
-          emissiveIntensity={0.25}
+          color="#20C9A6"
+          roughness={0.4}
+          metalness={0.5}
+          transparent
+          opacity={0.25}
         />
       </mesh>
 
       {/* Primary Orbital Ring */}
       <mesh ref={ring1Ref} rotation={[Math.PI / 3, Math.PI / 6, 0]}>
         <torusGeometry args={[2.5, 0.015, 16, 64]} />
-        <meshBasicMaterial color="#a855f7" transparent opacity={0.5} />
+        <meshBasicMaterial color="#F472B6" transparent opacity={0.15} />
       </mesh>
 
       {/* Secondary Orbital Ring */}
       <mesh ref={ring2Ref} rotation={[-Math.PI / 4, -Math.PI / 4, Math.PI / 3]}>
         <torusGeometry args={[3.1, 0.012, 16, 64]} />
-        <meshBasicMaterial color="#38bdf8" transparent opacity={0.4} />
+        <meshBasicMaterial color="#60A5FA" transparent opacity={0.15} />
       </mesh>
 
       {/* Orbital System Nodes */}
       <mesh position={[2.2, 1.2, 0]}>
         <sphereGeometry args={[0.09, 16, 16]} />
-        <meshBasicMaterial color="#38bdf8" />
+        <meshBasicMaterial color="#20C9A6" transparent opacity={0.3} />
       </mesh>
 
       <mesh position={[-2.4, -1.0, 0.8]}>
         <sphereGeometry args={[0.08, 16, 16]} />
-        <meshBasicMaterial color="#a855f7" />
+        <meshBasicMaterial color="#8B5CF6" transparent opacity={0.3} />
       </mesh>
 
       <mesh position={[0.5, -2.8, -0.5]}>
         <sphereGeometry args={[0.07, 16, 16]} />
-        <meshBasicMaterial color="#6366f1" />
+        <meshBasicMaterial color="#F472B6" transparent opacity={0.3} />
       </mesh>
 
       {/* Minimal Developer Identity Text */}
       <Text
         position={[0, 2.4, 0]}
         fontSize={0.38}
-        color="#f8fafc"
+        color="#555555"
+        fillOpacity={0.35}
         anchorX="center"
         anchorY="middle"
         letterSpacing={0.12}
@@ -94,7 +95,8 @@ function DeveloperCore({ position = [4.5, 0.5, 0], scale = 1 }) {
       <Text
         position={[0, -2.4, 0]}
         fontSize={0.18}
-        color="#94a3b8"
+        color="#555555"
+        fillOpacity={0.3}
         anchorX="center"
         anchorY="middle"
         letterSpacing={0.15}
