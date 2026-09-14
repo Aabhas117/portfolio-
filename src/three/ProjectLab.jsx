@@ -23,14 +23,14 @@ function ProjectLab({ position = [0, -3.8, -1], scale = 0.9 }) {
       {/* Project Lab Central Hub Marker */}
       <mesh position={[0, 0.8, 0]}>
         <boxGeometry args={[0.5, 0.5, 0.5]} />
-        <meshStandardMaterial color="#8B5CF6" wireframe transparent opacity={0.12} />
+        <meshStandardMaterial color="#1D4ED8" wireframe transparent opacity={0.25} />
       </mesh>
 
       <Text
         position={[0, 1.4, 0]}
         fontSize={0.24}
-        color="#555555"
-        fillOpacity={0.35}
+        color="#93C5FD"
+        fillOpacity={0.45}
         anchorX="center"
         anchorY="middle"
         letterSpacing={0.12}
@@ -49,10 +49,10 @@ function ProjectLab({ position = [0, -3.8, -1], scale = 0.9 }) {
             <mesh>
               <dodecahedronGeometry args={[0.8, 0]} />
               <meshStandardMaterial
-                color="#8B5CF6"
+                color="#3B82F6"
                 wireframe
                 transparent
-                opacity={0.12}
+                opacity={0.25}
               />
             </mesh>
 
@@ -60,26 +60,26 @@ function ProjectLab({ position = [0, -3.8, -1], scale = 0.9 }) {
             <mesh>
               <octahedronGeometry args={[0.4, 0]} />
               <meshStandardMaterial
-                color="#20C9A6"
-                roughness={0.4}
-                metalness={0.5}
+                color="#1D4ED8"
+                roughness={0.3}
+                metalness={0.7}
                 transparent
-                opacity={0.25}
+                opacity={0.4}
               />
             </mesh>
 
             {/* Orbital Ring */}
             <mesh rotation={[Math.PI / 4, Math.PI / 4, 0]}>
               <torusGeometry args={[1.3, 0.01, 16, 32]} />
-              <meshBasicMaterial color="#F472B6" transparent opacity={0.15} />
+              <meshBasicMaterial color="#8B5CF6" transparent opacity={0.3} />
             </mesh>
 
             {/* Title Label */}
             <Text
               position={[0, 1.2, 0]}
               fontSize={0.22}
-              color="#555555"
-              fillOpacity={0.35}
+              color="#93C5FD"
+              fillOpacity={0.4}
               anchorX="center"
               anchorY="middle"
               letterSpacing={0.1}
@@ -97,7 +97,7 @@ function ProjectLab({ position = [0, -3.8, -1], scale = 0.9 }) {
               return (
                 <mesh key={tech} position={[tx, ty, 0]}>
                   <sphereGeometry args={[0.07, 12, 12]} />
-                  <meshBasicMaterial color="#20C9A6" transparent opacity={0.25} />
+                  <meshBasicMaterial color="#60A5FA" transparent opacity={0.4} />
                 </mesh>
               );
             })}

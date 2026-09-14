@@ -28,18 +28,18 @@ function SkillNetwork({ position = [-5, 1.5, -2], scale = 0.85 }) {
       <mesh position={[0, 0, 0]}>
         <octahedronGeometry args={[0.7, 0]} />
         <meshStandardMaterial
-          color="#20C9A6"
+          color="#1D4ED8"
           wireframe
           transparent
-          opacity={0.15}
+          opacity={0.3}
         />
       </mesh>
 
       <Text
         position={[0, 1.0, 0]}
         fontSize={0.22}
-        color="#555555"
-        fillOpacity={0.35}
+        color="#93C5FD"
+        fillOpacity={0.45}
         anchorX="center"
         anchorY="middle"
         letterSpacing={0.1}
@@ -57,11 +57,11 @@ function SkillNetwork({ position = [-5, 1.5, -2], scale = 0.85 }) {
             <mesh>
               <sphereGeometry args={[0.35, 16, 16]} />
               <meshStandardMaterial
-                color="#8B5CF6"
+                color="#3B82F6"
                 roughness={0.3}
                 metalness={0.6}
                 transparent
-                opacity={0.2}
+                opacity={0.35}
               />
             </mesh>
 
@@ -69,8 +69,8 @@ function SkillNetwork({ position = [-5, 1.5, -2], scale = 0.85 }) {
             <Text
               position={[0, 0.55, 0]}
               fontSize={0.18}
-              color="#555555"
-              fillOpacity={0.35}
+              color="#93C5FD"
+              fillOpacity={0.4}
               anchorX="center"
               anchorY="middle"
               letterSpacing={0.08}
@@ -89,7 +89,7 @@ function SkillNetwork({ position = [-5, 1.5, -2], scale = 0.85 }) {
                 <group key={skillName} position={[nodeX, nodeY, 0]}>
                   <mesh>
                     <sphereGeometry args={[0.1, 12, 12]} />
-                    <meshBasicMaterial color="#20C9A6" transparent opacity={0.25} />
+                    <meshBasicMaterial color="#60A5FA" transparent opacity={0.4} />
                   </mesh>
                 </group>
               );

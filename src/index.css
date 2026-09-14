@@ -2,10 +2,10 @@
    DESIGN TOKENS & SYSTEM FOUNDATION
    ========================================== */
 :root {
-  /* Colors - Light Warm Palette */
-  --bg-primary: #F8F6F0;
+  /* Colors - Dark Bluish Background + Light UI Palette */
+  --bg-primary: #080D1C;
   --bg-secondary: #F0EEE7;
-  --bg-surface: rgba(255, 255, 255, 0.92);
+  --bg-surface: rgba(255, 255, 255, 0.94);
   --bg-surface-solid: #FFFFFF;
   --bg-card: #FFFFFF;
   
