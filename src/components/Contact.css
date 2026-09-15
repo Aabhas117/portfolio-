@@ -1,7 +1,10 @@
 .contact-section {
-  padding: 6rem 1.5rem;
-  background-color: var(--bg-secondary);
-  border-top: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
 }
 
 .contact-container {
@@ -217,6 +220,6 @@
   }
 
   .contact-section {
-    padding: 4rem 1rem;
+    padding: 1.5rem 1.25rem;
   }
 }
