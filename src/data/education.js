@@ -7,8 +7,8 @@ const education = [
     coursework: [
       "Data Structures & Algorithms",
       "Database Management Systems (DBMS)",
-      "Operating Systems",
       "Object-Oriented Programming (OOP)",
+      "Operating Systems",
     ],
   },
 ];

@@ -7,7 +7,7 @@ const profile = {
   graduation: "2028",
   cgpa: "7.35 / 10.0",
   summary:
-    "I’m Aabhas Kumar, a Computer Science Engineering student and Full-Stack Developer who builds practical, production-ready web applications. I work across React, Node.js, Express, and MongoDB, with a strong foundation in DSA and core CS concepts.",
+    "I’m Aabhas Kumar, a Computer Science Engineering student and Full-Stack Developer who builds practical, production-ready web applications. I work across React, Node.js, Express, and MongoDB, with a foundation in DSA and core CS concepts.",
   goal:
     "Become a strong software engineer by improving problem-solving skills, building real-world software, and continuously learning modern technologies.",
   github: "https://github.com/Aabhas117",

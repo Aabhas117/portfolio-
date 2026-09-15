@@ -51,7 +51,7 @@ function Navbar() {
           </ul>
         </nav>
 
-        {/* Right: Social Icons & Theme Switcher */}
+        {/* Right: Social Icons, Theme Switcher & Mobile Hamburger */}
         <div className="navbar-right-container">
           <div className="navbar-right-social">
             {socialLinks.map((item) =>
@@ -79,20 +79,20 @@ function Navbar() {
             )}
           </div>
           <ThemeSwitcher />
-        </div>
 
-        {/* Mobile Hamburger Button */}
-        <button
-          className="navbar-hamburger"
-          onClick={toggleMenu}
-          aria-label="Toggle navigation menu"
-          aria-expanded={isMenuOpen}
-          aria-controls="mobile-nav-menu"
-        >
-          <span className={`hamburger-bar ${isMenuOpen ? "open" : ""}`}></span>
-          <span className={`hamburger-bar ${isMenuOpen ? "open" : ""}`}></span>
-          <span className={`hamburger-bar ${isMenuOpen ? "open" : ""}`}></span>
-        </button>
+          {/* Mobile Hamburger Button */}
+          <button
+            className="navbar-hamburger"
+            onClick={toggleMenu}
+            aria-label="Toggle navigation menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-nav-menu"
+          >
+            <span className={`hamburger-bar ${isMenuOpen ? "open" : ""}`}></span>
+            <span className={`hamburger-bar ${isMenuOpen ? "open" : ""}`}></span>
+            <span className={`hamburger-bar ${isMenuOpen ? "open" : ""}`}></span>
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation Drawer */}
