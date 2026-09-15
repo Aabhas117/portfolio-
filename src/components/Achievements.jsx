@@ -1,22 +1,8 @@
 import { motion } from "framer-motion";
-import achievements from "../data/achievements";
-import { FaTrophy, FaCode, FaRocket, FaLaptopCode } from "react-icons/fa";
+import { FaTrophy } from "react-icons/fa";
 import "./Achievements.css";
 
 function Achievements() {
-  const getAchievementIcon = (id) => {
-    switch (id) {
-      case 1:
-        return <FaCode className="achievement-icon icon-yellow" />;
-      case 2:
-        return <FaRocket className="achievement-icon icon-purple" />;
-      case 3:
-        return <FaLaptopCode className="achievement-icon icon-cyan" />;
-      default:
-        return <FaTrophy className="achievement-icon icon-yellow" />;
-    }
-  };
-
   return (
     <section id="achievements" className="achievements-section">
       <motion.div
@@ -32,19 +18,13 @@ function Achievements() {
           <div className="title-underline"></div>
         </div>
 
-        {/* Dynamic Achievements Cards Grid */}
-        <div className="achievements-grid">
-          {achievements.map((item) => (
-            <div key={item.id} className="achievement-card">
-              <div className="achievement-card-header">
-                <div className="achievement-icon-wrapper">
-                  {getAchievementIcon(item.id)}
-                </div>
-                <h3 className="achievement-card-title">{item.title}</h3>
-              </div>
-              <p className="achievement-card-desc">{item.description}</p>
-            </div>
-          ))}
+        {/* Coming Soon Card */}
+        <div className="achievements-coming-soon-card">
+          <FaTrophy className="coming-soon-icon" />
+          <h3 className="coming-soon-title">COMING SOON</h3>
+          <p className="coming-soon-desc">
+            New milestones, certifications, and contest rankings will be updated here soon.
+          </p>
         </div>
       </motion.div>
     </section>

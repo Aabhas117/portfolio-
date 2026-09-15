@@ -75,7 +75,7 @@ function Contact() {
           <div className="contact-details-card">
             <h3 className="details-title">CONTACT DIRECTORY</h3>
             <p className="details-desc">
-              Feel free to reach out directly via email, phone, or connect across technical networks.
+              Feel free to reach out directly via email or connect across technical networks.
             </p>
 
             <div className="details-list">
@@ -178,7 +178,7 @@ function Contact() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="John Doe"
+                    placeholder="Your Name"
                     className={`form-input ${formErrors.name ? "input-error" : ""}`}
                   />
                   {formErrors.name && <span className="error-text">{formErrors.name}</span>}
@@ -194,7 +194,7 @@ function Contact() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="john@example.com"
+                    placeholder="name@example.com"
                     className={`form-input ${formErrors.email ? "input-error" : ""}`}
                   />
                   {formErrors.email && <span className="error-text">{formErrors.email}</span>}
@@ -210,7 +210,7 @@ function Contact() {
                     rows="5"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Hello Aabhas, I'd like to discuss a project..."
+                    placeholder="Write your message"
                     className={`form-input form-textarea ${formErrors.message ? "input-error" : ""}`}
                   ></textarea>
                   {formErrors.message && <span className="error-text">{formErrors.message}</span>}

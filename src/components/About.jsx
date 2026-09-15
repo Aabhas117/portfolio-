@@ -38,7 +38,7 @@ function About() {
         <div className="about-grid">
           {/* Left Column: Summary & Academic Info */}
           <div className="about-left">
-            <h3 className="about-subtitle">BACKGROUND & OBJECTIVES</h3>
+            <h3 className="about-subtitle">Hi</h3>
             <p className="about-text">{profile.summary}</p>
 
             {/* Academic Information Box */}
