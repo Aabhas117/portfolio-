@@ -7,17 +7,20 @@ function About() {
     {
       number: "01",
       title: "PROBLEM SOLVING",
-      description: "Practicing core Data Structures and Algorithms with a focus on writing optimized, clean code.",
+      description:
+        "Practicing core Data Structures and Algorithms with a focus on writing optimized, clean code.",
     },
     {
       number: "02",
       title: "FULL STACK DEVELOPMENT",
-      description: "Building responsive, modern end-to-end web applications using the MERN stack.",
+      description:
+        "Building responsive, modern end-to-end web applications using the MERN stack.",
     },
     {
       number: "03",
       title: "BACKEND ENGINEERING",
-      description: "Architecting RESTful APIs, database schemas, authentication flows, and server-side logic.",
+      description:
+        "Architecting RESTful APIs, database schemas, authentication flows, and server-side logic.",
     },
   ];
 
@@ -38,7 +41,7 @@ function About() {
         <div className="about-grid">
           {/* Left Column: Summary & Academic Info */}
           <div className="about-left">
-            <h3 className="about-subtitle">Hi</h3>
+            <h3 className="about-subtitle">Who I am</h3>
             <p className="about-text">{profile.summary}</p>
 
             {/* Academic Information Box */}
@@ -57,15 +60,11 @@ function About() {
                   <span className="academic-label">GRADUATION:</span>
                   <span className="academic-value">{profile.graduation}</span>
                 </div>
-                <div className="academic-item">
-                  <span className="academic-label">CGPA:</span>
-                  <span className="academic-value highlight-val">{profile.cgpa}</span>
-                </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column: 4 Static Pillars */}
+          {/* Right Column: 3 Focus Cards */}
           <div className="about-right">
             <div className="cards-grid">
               {cards.map((card) => (

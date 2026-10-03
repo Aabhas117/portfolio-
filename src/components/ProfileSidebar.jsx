@@ -1,10 +1,21 @@
 import profile from "../data/profile";
-import { FaEnvelope, FaGithub, FaLinkedin, FaCode, FaGraduationCap, FaAward } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+  FaCode,
+  FaGraduationCap,
+  FaAward,
+} from "react-icons/fa";
 import "./ProfileSidebar.css";
 
 function ProfileSidebar() {
   const socialLinks = [
-    { name: "Email", url: profile.email ? `mailto:${profile.email}` : "", icon: <FaEnvelope /> },
+    {
+      name: "Email",
+      url: profile.email ? `mailto:${profile.email}` : "",
+      icon: <FaEnvelope />,
+    },
     { name: "GitHub", url: profile.github, icon: <FaGithub /> },
     { name: "LinkedIn", url: profile.linkedin, icon: <FaLinkedin /> },
     { name: "LeetCode", url: profile.leetcode, icon: <FaCode /> },
@@ -15,18 +26,11 @@ function ProfileSidebar() {
       {/* Profile Image Avatar */}
       <div className="profile-avatar-wrapper">
         <img
-          src="/Profile.jpeg"
+          src="/profile.jpg"
           alt="Aabhas Kumar"
           className="profile-image profile-avatar-img"
-          onError={(e) => {
-            if (e.target.src.includes("/Profile.jpeg")) {
-              e.target.src = "/profile.jpeg";
-            } else if (e.target.src.includes("/profile.jpeg")) {
-              e.target.src = "/Profile.jpg";
-            } else if (e.target.src.includes("/Profile.jpg")) {
-              e.target.src = "/profile.jpg";
-            }
-          }}
+          width="160"
+          height="160"
         />
       </div>
 
@@ -44,7 +48,7 @@ function ProfileSidebar() {
             <a
               key={item.name}
               href={item.url}
-              target={item.name === "Email" || item.name === "Phone" ? "_self" : "_blank"}
+              target={item.name === "Email" ? "_self" : "_blank"}
               rel="noopener noreferrer"
               className="profile-social-btn"
               title={item.name}
@@ -81,8 +85,8 @@ function ProfileSidebar() {
         <div className="meta-item">
           <FaAward className="meta-icon icon-cyan" />
           <div className="meta-info">
-            <span className="meta-label">DEGREE &amp; CGPA</span>
-            <span className="meta-value">B.Tech CSE • {profile.cgpa}</span>
+            <span className="meta-label">DEGREE</span>
+            <span className="meta-value">B.Tech CSE • {profile.graduation}</span>
           </div>
         </div>
       </div>
@@ -93,8 +97,6 @@ function ProfileSidebar() {
           <a
             href={profile.resume}
             download="Aabhas_Kumar_Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
             className="btn btn-primary sidebar-btn"
           >
             DOWNLOAD RESUME
