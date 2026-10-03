@@ -9,9 +9,12 @@ function UniverseParticles({ count = 600 }) {
   const positions = useMemo(() => {
     const pos = new Float32Array(count * 3);
     for (let i = 0; i < count; i++) {
-      pos[i * 3] = (Math.random() - 0.5) * 80;
-      pos[i * 3 + 1] = (Math.random() - 0.5) * 50;
-      pos[i * 3 + 2] = (Math.random() - 0.5) * 40 - 5;
+      const s1 = Math.sin(i * 12.9898 + 78.233) * 43758.5453;
+      const s2 = Math.sin(i * 63.7264 + 19.823) * 43758.5453;
+      const s3 = Math.sin(i * 41.5231 + 93.112) * 43758.5453;
+      pos[i * 3] = ((s1 - Math.floor(s1)) - 0.5) * 80;
+      pos[i * 3 + 1] = ((s2 - Math.floor(s2)) - 0.5) * 50;
+      pos[i * 3 + 2] = ((s3 - Math.floor(s3)) - 0.5) * 40 - 5;
     }
     return pos;
   }, [count]);

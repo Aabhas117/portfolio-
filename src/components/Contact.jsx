@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import profile from "../data/profile";
-import { FaEnvelope, FaPhoneAlt, FaLinkedin, FaGithub, FaCode, FaPaperPlane, FaCheckCircle } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub, FaCode, FaPaperPlane, FaCheckCircle } from "react-icons/fa";
 import "./Contact.css";
 
 function Contact() {

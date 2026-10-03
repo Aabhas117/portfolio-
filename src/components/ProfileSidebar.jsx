@@ -26,7 +26,7 @@ function ProfileSidebar() {
       {/* Profile Image Avatar */}
       <div className="profile-avatar-wrapper">
         <img
-          src="/profile.jpg"
+          src="/Profile.jpg"
           alt="Aabhas Kumar"
           className="profile-image profile-avatar-img"
           width="160"

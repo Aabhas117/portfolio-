@@ -13,6 +13,7 @@ const profile = {
   linkedin: "https://www.linkedin.com/in/aabhas-kumar-158b6b326/",
   leetcode: "https://leetcode.com/u/aabhas__11/",
   resume: "/Aabhas_Kumar_Resume.pdf",
+  cgpa: "7.35 / 10.0",
 };
 
 export default profile;
