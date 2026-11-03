@@ -1,7 +1,7 @@
 const profile = {
   name: "Aabhas Kumar",
   role: "Computer Science Engineering Student | Full Stack Web Developer",
-  email: "aabhas147@gmail.com",
+  email: "aabhas463@gmail.com",
   college: "Ajay Kumar Garg Engineering College, Ghaziabad",
   degree: "Bachelor of Technology in Computer Science & Engineering",
   graduation: "2028 (Expected)",
