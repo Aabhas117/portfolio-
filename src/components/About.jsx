@@ -14,7 +14,7 @@ function About() {
       number: "02",
       title: "FULL STACK DEVELOPMENT",
       description:
-        "Building responsive, modern end-to-end web applications using the MERN stack.",
+        "Building responsive, modern end-to-end web applications using the Full stack.",
     },
     {
       number: "03",
@@ -30,7 +30,7 @@ function About() {
         className="about-container"
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
+        viewport={{ once: true, margin: "-81px" }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <div className="about-header">
